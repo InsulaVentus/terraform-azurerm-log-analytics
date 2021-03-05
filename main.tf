@@ -49,4 +49,6 @@ resource "azurerm_log_analytics_solution" "logs" {
     publisher = var.solutions[count.index].publisher
     product   = var.solutions[count.index].product
   }
+
+  tags = var.tags
 }
