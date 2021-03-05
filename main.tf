@@ -1,8 +1,10 @@
 terraform {
   required_version = ">= 0.12.0"
-  required_providers {
-    azurerm = "~> 2.49.0"
-  }
+}
+
+provider "azurerm" {
+  version = "~> 2.49.0"
+  features {}
 }
 
 resource "azurerm_resource_group" "logs" {
